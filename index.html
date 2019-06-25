@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+        function GTNN(arr) {
+            var min = arr[0];
+            for (let i=1;i<arr.length;i++){
+                if (arr[i]<min){
+                    min = arr[i];
+                }
+            }
+            return min;
+        }
+        function GTLN(arr) {
+            var max = arr[0];
+            for (let i=1;i<arr.length;i++){
+                if (arr[i]>max){
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        let arr = [];
+        for (let i=0;i<100;i++) {
+            arr[i] = Math.floor(Math.random()*101);
+        }
+        let min =GTNN(arr);
+        let max = GTLN(arr);
+        document.write(arr+"</br>");
+        document.write("GTNN là : " +min);
+        document.write("GTLN là : " +max)
+    </script>
+</body>
+</html>
